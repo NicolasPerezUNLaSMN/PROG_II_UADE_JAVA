@@ -19,6 +19,7 @@ Este repositorio contiene el material de clases, ejemplos de código y recursos 
 - Código fuente de ejemplos trabajados en clase.
 - Ejercicios y desafíos de programación.
 - Proyectos prácticos para reforzar los conocimientos.
+- Notas, equipos, tps, etcs: [https://docs.google.com/spreadsheets/d/11HrjVrljUUwaN4DXZxyK56ztzM1Cc7sAeIcvge8c-y8/edit?usp=sharing](https://docs.google.com/spreadsheets/d/11HrjVrljUUwaN4DXZxyK56ztzM1Cc7sAeIcvge8c-y8/edit?usp=sharing)
 
 ---
 
