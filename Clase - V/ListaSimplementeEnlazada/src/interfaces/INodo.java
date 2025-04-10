@@ -1,8 +1,10 @@
 package interfaces;
 
 public interface INodo {
-    int getDato();
-    void setDato(int dato);
-    INodo getSiguiente();
-    void setSiguiente(INodo nodo);
+	
+	public int getDato();
+	public void setDato(int dato);
+	public INodo getSiguiente();
+	public void setSiguiente(INodo nodo);
+	
 }
