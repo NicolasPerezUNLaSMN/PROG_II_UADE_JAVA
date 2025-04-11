@@ -19,8 +19,11 @@ Este repositorio contiene el material de clases, ejemplos de código y recursos 
 - Código fuente de ejemplos trabajados en clase.
 - Ejercicios y desafíos de programación.
 - Proyectos prácticos para reforzar los conocimientos.
-- Lista de reproducción: [https://www.youtube.com/playlist?list=PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw]
 - Notas, equipos, tps, etcs: [https://docs.google.com/spreadsheets/d/11HrjVrljUUwaN4DXZxyK56ztzM1Cc7sAeIcvge8c-y8/edit?usp=sharing](https://docs.google.com/spreadsheets/d/11HrjVrljUUwaN4DXZxyK56ztzM1Cc7sAeIcvge8c-y8/edit?usp=sharing)
+
+## 🎵 Mi lista de reproducción
+
+[![Ver en YouTube](https://studio.youtube.com/playlist/PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw/videos)](https://studio.youtube.com/playlist/PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw/videos)
 
 ---
 
