@@ -23,7 +23,7 @@ Este repositorio contiene el material de clases, ejemplos de código y recursos 
 
 ## 🎵 Mi lista de reproducción
 
-[![Ver en YouTube](https://studio.youtube.com/playlist/PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw/videos)](https://studio.youtube.com/playlist/PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw/videos)
+[![Ver en YouTube]](https://www.youtube.com/playlist?list=PLbwWly6AYXqd8-dvI8mdI_xvZ4G6TyXBw)
 
 ---
 
