@@ -9,7 +9,7 @@ public class TestListasMemoria {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int N = 90000;
+		int N = 200000;
 
         // Test Lista Dinámica
         Runtime runtime = Runtime.getRuntime();
