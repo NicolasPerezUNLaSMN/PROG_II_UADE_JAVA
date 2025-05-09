@@ -9,13 +9,13 @@ public class TestArbolBinario {
 	   public static void main(String[] args) {
 	        IArbol arbol = new Arbol();
 	        
-	        arbol.insertar(50);
-	        arbol.insertar(30);
-	        arbol.insertar(70);
-	        arbol.insertar(20);
-	        arbol.insertar(40);
-	        arbol.insertar(60);
-	        arbol.insertar(80);
+	        arbol.insertarIterativo(50);
+	        arbol.insertarIterativo(30);
+	        arbol.insertarIterativo(70);
+	        arbol.insertarIterativo(20);
+	        arbol.insertarIterativo(40);
+	        arbol.insertarIterativo(60);
+	        arbol.insertarIterativo(80);
 	        
 	        System.out.println("Recorrido Inorden (recursivo):");
 	        arbol.recorridoInorden();

@@ -99,4 +99,78 @@ public class Arbol implements IArbol {
             actual = actual.getDerecho();
         }
     }
+    
+    
+   
+    public void insertarIterativo(int dato) {
+        if (raiz == null) {
+            raiz = new Nodo(dato);
+            return;
+        }
+        INodo actual = raiz;
+        INodo padre = null;
+
+        while (actual != null) {
+            padre = actual;
+            if (dato < actual.getDato()) {
+                actual = actual.getIzquierdo();
+            } else if (dato > actual.getDato()) {
+                actual = actual.getDerecho();
+            } else {
+                // El dato ya existe, no se inserta duplicado
+                return;
+            }
+        }
+        // Ya tenemos el nodo padre al que se le debe colgar el nuevo nodo
+        if (dato < padre.getDato()) {
+            padre.setIzquierdo(new Nodo(dato));
+        } else {
+            padre.setDerecho(new Nodo(dato));
+        }
+    }
+    
+    
+   
+    public void eliminar(int dato) {
+        raiz = eliminarRec(raiz, dato);
+    }
+
+    private INodo eliminarRec(INodo nodo, int dato) {
+        if (nodo == null) return null;
+
+        if (dato < nodo.getDato()) {
+            nodo.setIzquierdo(eliminarRec(nodo.getIzquierdo(), dato));
+        } else if (dato > nodo.getDato()) {
+            nodo.setDerecho(eliminarRec(nodo.getDerecho(), dato));
+        } else {
+            // Caso 1: nodo sin hijos
+            if (nodo.getIzquierdo() == null && nodo.getDerecho() == null) {
+                return null;
+            }
+            // Caso 2: un solo hijo
+            if (nodo.getIzquierdo() == null) {
+                return nodo.getDerecho();
+            }
+            if (nodo.getDerecho() == null) {
+                return nodo.getIzquierdo();
+            }
+
+            // Caso 3: dos hijos
+            INodo sucesor = encontrarMinimo(nodo.getDerecho());
+            nodo.setDato(sucesor.getDato());
+            nodo.setDerecho(eliminarRec(nodo.getDerecho(), sucesor.getDato()));
+        }
+        return nodo;
+    }
+
+    private INodo encontrarMinimo(INodo nodo) {
+        while (nodo.getIzquierdo() != null) {
+            nodo = nodo.getIzquierdo();
+        }
+        return nodo;
+    }
+    
+    
+    
+    
 }
