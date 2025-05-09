@@ -10,7 +10,6 @@ public interface IArbol {
 	    void recorridoPostorden();
 	    
 	    void recorridoInordenSinRecursion();
-	    
 	    public void insertarIterativo(int dato);
 	    
 	    public void eliminar(int dato);

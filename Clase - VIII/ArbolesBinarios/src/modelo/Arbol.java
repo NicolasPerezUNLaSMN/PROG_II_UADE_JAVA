@@ -17,16 +17,18 @@ public class Arbol implements IArbol {
         raiz = insertarRec(raiz, dato);
     }
 
-    private INodo insertarRec(INodo nodo, int dato) {
-        if (nodo == null) {
+    private INodo insertarRec(INodo nodoRaiz, int dato) {
+        if (nodoRaiz == null) {
             return new Nodo(dato);
         }
-        if (dato < nodo.getDato()) {
-            nodo.setIzquierdo(insertarRec(nodo.getIzquierdo(), dato));
-        } else if (dato > nodo.getDato()) {
-            nodo.setDerecho(insertarRec(nodo.getDerecho(), dato));
+        
+        if (dato < nodoRaiz.getDato()) { 
+            nodoRaiz.setIzquierdo(insertarRec(nodoRaiz.getIzquierdo(), dato));
+            
+        } else if (dato > nodoRaiz.getDato()) {
+            nodoRaiz.setDerecho(insertarRec(nodoRaiz.getDerecho(), dato));
         }
-        return nodo;
+        return nodoRaiz;
     }
 
     @Override
@@ -109,7 +111,6 @@ public class Arbol implements IArbol {
         }
         INodo actual = raiz;
         INodo padre = null;
-
         while (actual != null) {
             padre = actual;
             if (dato < actual.getDato()) {
@@ -119,8 +120,8 @@ public class Arbol implements IArbol {
             } else {
                 // El dato ya existe, no se inserta duplicado
                 return;
+            }  
             }
-        }
         // Ya tenemos el nodo padre al que se le debe colgar el nuevo nodo
         if (dato < padre.getDato()) {
             padre.setIzquierdo(new Nodo(dato));
