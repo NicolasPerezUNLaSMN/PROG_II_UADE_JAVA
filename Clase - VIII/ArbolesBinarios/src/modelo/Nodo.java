@@ -4,7 +4,7 @@ import interfaces.INodo;
 
 public class Nodo implements INodo {
 	
-    private int dato;
+    private int dato; //Persona ---> T ----> Objets
     private INodo izquierdo;
     private INodo derecho;
 
