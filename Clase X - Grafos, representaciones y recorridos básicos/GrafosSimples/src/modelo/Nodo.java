@@ -7,7 +7,7 @@ import interfaces.INodo;
 
 public class Nodo implements INodo {
 	
-    private int valor; // Valor almacenado en el nodo
+    private int valor; // Valor almacenado en el nodo; T <T>
     private List<INodo> vecinos; // Lista de nodos vecinos (adyacentes)
 
     // Constructor

@@ -27,6 +27,9 @@ public class TestGrafos {
 	        grafo.agregarArista(4, 6);
 	        grafo.agregarArista(5, 5);
 	        grafo.agregarArista(6, 5);
+	        grafo.agregarArista(1, 2);
+	        grafo.agregarArista(1, 2);
+	        grafo.agregarArista(1, 2);
 
 	        // Visualización y recorridos
 	        grafo.mostrarMatrizAdyacencia();
