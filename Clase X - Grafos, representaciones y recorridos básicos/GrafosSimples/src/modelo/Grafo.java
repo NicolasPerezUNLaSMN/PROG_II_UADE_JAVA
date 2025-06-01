@@ -113,12 +113,14 @@ public class Grafo implements IGrafo {
      System.out.println();
  }
 
- // Función recursiva auxiliar para DFS
+// Función recursiva auxiliar para DFS
  private void dfsRec(Nodo actual, Set<Integer> visitados) {
      visitados.add(actual.getValor());
      System.out.print(actual.getValor() + " ");
-
-     for (INodo vecino : actual.getVecinos()) {
+     
+     List<INodo> vecinos = actual.getVecinos();
+     for (int i = vecinos.size() - 1; i >= 0; i--) {
+         INodo vecino = vecinos.get(i);
          if (!visitados.contains(vecino.getValor())) {
              dfsRec((Nodo) vecino, visitados);
          }
