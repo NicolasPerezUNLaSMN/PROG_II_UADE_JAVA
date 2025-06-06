@@ -35,6 +35,10 @@ public class Grafo implements IGrafo {
             System.out.println();
         }
     }
+    
+    public Nodo getNodo(int valor) {
+        return nodos.get(valor);
+    }
 
     public Map<Integer, Nodo> getNodos() {
         return nodos;
