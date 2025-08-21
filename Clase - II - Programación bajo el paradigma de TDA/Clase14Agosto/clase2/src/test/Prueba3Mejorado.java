@@ -12,8 +12,10 @@ public class Prueba3Mejorado {
 		
 		int cantidad = 5; //ingresarEntero!!
 		int[] arregloVariable = new int[cantidad];
+		//Nombre el plural!!!! numeros
 		
 		ClaseArreglosEnteros c = new ClaseArreglosEnteros(); //Instancia de la clase
+		
 		
 		
 		c.cargarArregloEnterosPorTeclado(arregloVariable, cantidad);// Necesita sus argume

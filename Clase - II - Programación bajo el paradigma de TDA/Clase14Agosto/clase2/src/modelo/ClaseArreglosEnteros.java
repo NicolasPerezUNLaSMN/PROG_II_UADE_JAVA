@@ -2,9 +2,14 @@ package modelo;
 
 import java.util.Scanner;
 
-public class ClaseArreglosEnteros  {
+import interfaces.IClaseArreglosEnteros;
+
+public class ClaseArreglosEnteros  implements  IClaseArreglosEnteros{
 	
-	static int ingresarEntero() { //Inicia la funcion
+	 @Override
+	 public int ingresarEntero() { //Inicia la funcion
+		 
+		 ///static: ----> 
 		
 		Scanner s = new Scanner(System.in);
 		
@@ -18,7 +23,8 @@ public class ClaseArreglosEnteros  {
 	
 	 //Cargue el arreglo.... muestre el arreglo .... sume el arreglo!!!!
 	//Procedimiento que cargue el arreglo!!!
-	 public static void cargarArregloEnterosPorTeclado(int[] arreglo, int tam){
+	 @Override
+	 public void cargarArregloEnterosPorTeclado(int[] arreglo, int tam){
 		
 		for ( int i = 0; i<tam; i++) {
 			
@@ -30,16 +36,24 @@ public class ClaseArreglosEnteros  {
 	};
 	
 	//
-	 public static void mostrarArregloDeEnteros(int[] arreglo, int tam) {
+	 @Override
+	 public void mostrarArregloDeEnteros(int[] arreglo, int tam) {
 		
+		 
 		System.out.print("ARREGLO: [ ");
 		for ( int i = 0; i<tam; i++) {
 			
 			System.out.print(" " +arreglo[i]);
 		}
 		System.out.print("] \n");
-	};
+	}
+
 	
+	
+	//Puedo hacer funciones y procedimientos propios!!!!!
+	public int funcionCopada() {
+		return 0;
+	}
 
 
 }
