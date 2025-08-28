@@ -4,6 +4,7 @@ import interfaces.ICola;
 
 //Implementación de la clase Cola con estructura estática
 public class Cola implements ICola {
+	
  private static final int MAX_SIZE = 100;
  private int[] elementos;
  private int inicio, fin, cantidad;
