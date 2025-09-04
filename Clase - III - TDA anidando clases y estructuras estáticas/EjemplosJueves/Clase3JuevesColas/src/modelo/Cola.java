@@ -1,14 +1,16 @@
 package modelo;
 
-public class Cola {
+public class Cola { ///Cola estática!!!!
 	
 	//Atributos
 	private int primero; 
 	private int ultimo;  //La pos donde yo voy a agregar
 	private int [] colaDatos = new int[100];//Estatica!!!
 	
-	//Atributos!!! 
+	//Atributos!!! - opcional !!!
 	private int cantidad;
+	
+	
 	public int getPrimero() {
 		return primero;
 	}
@@ -56,12 +58,15 @@ public class Cola {
 	
 	//Métodos!!!!
 	public void encolar(int numero) {
+		// 3    4     5     1      7
 		
 		//Ultimo a tope... 100
 		//ultimo = (  (ultimo +1) % 100 -1 ) //cola circular
 		
 		this.colaDatos[ultimo] = numero;
-		ultimo = ultimo + 1; 
+		
+		ultimo = ultimo + 1;
+		
 		cantidad = cantidad +1; 
 		//primero = 0; Primero fijo cuando agrego elementos!!! 
 		
@@ -69,6 +74,10 @@ public class Cola {
 	
 	//Desencolar retorna elementos de la cola..
 	public int desencolar() {
+		//  3     4      1      2
+		//primero: 0
+		//primero = primero + 1;
+		//return  colaDatos[primero];
 		
 		cantidad = cantidad - 1; 
 		int primeroAntesDeSacar = primero;

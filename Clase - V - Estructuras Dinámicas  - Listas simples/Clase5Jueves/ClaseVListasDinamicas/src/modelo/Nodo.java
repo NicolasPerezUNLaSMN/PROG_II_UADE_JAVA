@@ -9,7 +9,6 @@ public class Nodo implements INodo {
 	private INodo siguiente;
 	
 	
-	
 
 	public Nodo(int dato, INodo siguiente) {
 		super();

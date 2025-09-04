@@ -7,14 +7,14 @@ public class Lista implements ILista {
 	
 	//Atributos!!!!
 	private INodo  primero;
+	///private Nodo primero
+	
 	///int cant opcional!!!!
 	///
 	///
 	///
 	///
-	///
-	///
-	///
+
 	
 	public int busquedaLineal(int d) {
 		
@@ -67,8 +67,9 @@ public class Lista implements ILista {
 	}; 
 	public int obtenerGenerico(int pos) {
 		//(pos = 2)
-		//23    333    1   23 -> null
+		//23    333    1   25 -> null
 		//return -> 1
+		
 		if(!estaVacia() && pos<cantidadElementos()) {
 			int contador = 0; 
 			//for ( contador = 0; contador <pos;contador++
@@ -78,6 +79,7 @@ public class Lista implements ILista {
 				contador++;	
 			}
 			return actual.getDato();
+			
 		}else {
 			System.out.println("Error!!!!no puedo sacar un elemento\n de esta lista.");
 			return -1;
@@ -91,9 +93,13 @@ public class Lista implements ILista {
 		
 		if(estaVacia()) {
 			return 0;
+			
 		}else { ///111   222
+		
 			int cantidad = 1; 
+			
 			INodo  actual = this.primero;
+			
 			while(actual.getSiguiente()!=null) {
 				actual = actual.getSiguiente();
 				cantidad++;
@@ -107,16 +113,25 @@ public class Lista implements ILista {
 	public void agregarUltimo(int d) {
 		///L-> 54 ---->- 11 -->-- 22 -->null   (44)->null
 		///                             -------->
-		INodo  nuevoNodo = new Nodo(d);
+		INodo  nuevoNodo = new Nodo(d); //((44, null))
+		
 		if(!estaVacia()) {
+			
 			INodo  actual = this.primero;
+			
 			while (actual.getSiguiente()!=null) {	
+				
 				actual = actual.getSiguiente();
+				//actual.siguiente; -- encapsulado!!!!
+				///Setter??? !!!! NO se puede porque ni hay
+				//////un setter que haga eso!!!
+				//actual.setSiguiente(this.getPrimero());
+				
 			}
 			
 			//Actual que será? 22 (ultimo)
 			actual.setSiguiente(nuevoNodo);
-		}else {
+		}else { //Vacio el más facil siempre!!!
 			agregarPrimero(d);
 		}
 		
@@ -124,19 +139,24 @@ public class Lista implements ILista {
 	
 	
 	public void agregarPrimero(int d) {
-	
 	//Lista --> |22| -->  |3| --->  |4|     (44)
 	//Crear el nodo
-	Nodo nuevoNodo = new Nodo(d);
-	
+	Nodo nuevoNodo = new Nodo(d); //nuevoNodo = (44, null)
+	//primero = nuevoNodo()
 	if ( !estaVacia()) {
 		nuevoNodo.setSiguiente(this.primero);
+		
 		 //(44) -->  |22| -->  |3| --->  |4| 
-		this.primero = nuevoNodo;
+		//primero = nuevoNodo;
+		setPrimero(nuevoNodo); //validación
+		
 		//Lista --> (44) -->  |22| -->  |3| --->  |4| 
 	}else { //está vacia
 		
-		this.primero = nuevoNodo;
+		//lista ---> null
+		//null.setSiguiente NO ANDA!!!!
+		///primero = nuevoNodo;
+		setPrimero(nuevoNodo); 
 	}
 	
 	};
@@ -158,22 +178,27 @@ public class Lista implements ILista {
 	};
 	
 
-
+	//Constructor de la lista!!!!
 	public Lista(INodo  primero) {
 		super();
 		this.primero = primero;
 	}	
 	
+	//Se usa este!!!!!!
 	public Lista() {
 		super();
 		this.primero = null;
 	}
 
+	
+	
+	
 	public INodo  getPrimero() {
 		return primero;
 	}
 
 	public void setPrimero(INodo  primero) {
+		//Validaciones!!!
 		this.primero = primero;
 	}
 
