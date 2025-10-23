@@ -5,7 +5,9 @@ import interfaces.INodo;
 public class Nodo<T> implements INodo<T>  {
 	
 		private T dato;
+		
 	    private INodo<T> siguiente;
+	    
 	    private INodo<T> anterior;
 
 	    public Nodo(T dato) {

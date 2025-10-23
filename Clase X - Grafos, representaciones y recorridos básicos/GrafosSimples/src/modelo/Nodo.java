@@ -8,12 +8,13 @@ import interfaces.INodo;
 public class Nodo implements INodo {
 	
     private int valor; // Valor almacenado en el nodo; T <T>
+    
     private List<INodo> vecinos; // Lista de nodos vecinos (adyacentes)
 
     // Constructor
     public Nodo(int valor) {
         this.valor = valor;
-        this.vecinos = new ArrayList<>();
+        this.vecinos = new ArrayList<>(); ///crea la lista!!! VACIO!!!
     }
 
     // Getter del valor
@@ -26,12 +27,25 @@ public class Nodo implements INodo {
         this.valor = valor;
     }
 
+    
+    
+    
+    
     // Agrega un nodo vecino a la lista de adyacencia
     public void agregarVecino(INodo vecino) {
+    	
         if (!vecinos.contains(vecino)) {
             vecinos.add(vecino);
         }
+        
     }
+    
+    
+    
+    
+    
+    
+    
 
     // Devuelve la lista de vecinos
     public List<INodo> getVecinos() {

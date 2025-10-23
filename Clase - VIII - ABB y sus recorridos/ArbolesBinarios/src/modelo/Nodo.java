@@ -5,6 +5,7 @@ import interfaces.INodo;
 public class Nodo implements INodo {
 	
     private int dato; //Persona ---> T ----> Objets
+    
     private INodo izquierdo;
     private INodo derecho;
 

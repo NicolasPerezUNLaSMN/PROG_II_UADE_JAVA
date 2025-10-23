@@ -7,6 +7,7 @@ public interface ILista {
     void insertarFin(int valor);
     boolean eliminar(int valor);
     boolean contiene(int valor);
+    
     int obtener(int indice); // obtener elemento por índice
     int tamaño();
     void imprimir(); // opcional para debug

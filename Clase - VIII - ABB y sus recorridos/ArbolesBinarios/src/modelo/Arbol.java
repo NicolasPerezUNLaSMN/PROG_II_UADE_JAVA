@@ -8,6 +8,7 @@ import interfaces.INodo;
 public class Arbol implements IArbol {
 	
     private INodo raiz;
+    
 
     public Arbol() {
         this.raiz = null;
@@ -38,9 +39,11 @@ public class Arbol implements IArbol {
     }
 
     private INodo buscarRec(INodo nodo, int dato) {
+    	
         if (nodo == null || nodo.getDato() == dato) { //|| OR
             return nodo;
         }
+        
         if (dato < nodo.getDato()) {
             return buscarRec(nodo.getIzquierdo(), dato);
         } else {
@@ -68,9 +71,11 @@ public class Arbol implements IArbol {
 
     private void preordenRec(INodo nodo) {
         if (nodo != null) {
+        	
             System.out.print(nodo.getDato() + " "); //visitar la raiz
             preordenRec(nodo.getIzquierdo()); // recorrer Izq
             preordenRec(nodo.getDerecho());
+            
         }
     }
 

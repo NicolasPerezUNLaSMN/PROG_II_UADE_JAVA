@@ -6,6 +6,7 @@ public class ListaEstatica implements ILista {
 	
     private int[] datos;
     private int tamaño;
+    
     private static final int CAPACIDAD_INICIAL = 1000000;
 
     public ListaEstatica() {

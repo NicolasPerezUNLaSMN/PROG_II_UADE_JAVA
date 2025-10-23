@@ -8,6 +8,8 @@ public class Lista<T>  implements ILista<T> {
 	///Para practicar tambien podrían hacer la lista
 	///Con un puntero al ultimo nodo
 	 private INodo<T> primero;
+	 //private INodo<T> ultimo;
+	 //int tam... opcional
 
 	    public Lista() {
 	        this.primero = null;
@@ -15,13 +17,21 @@ public class Lista<T>  implements ILista<T> {
 
 	    @Override
 	    public void insertar(INodo<T> nodo) {
+	    	///Diferencias...
+	    	///Antes... int dato;
+	    	///Nodo nuevo = new Nodo (dato);
+	    	///
 	        if (esVacia()) {
 	            primero = nodo;
 	        } else {
+	        	
 	            INodo<T> actual = primero;
+	            
 	            while (actual.getSiguiente() != null) {
 	                actual = actual.getSiguiente();
-	            }
+	            }//Cuando sale el while???
+	            ///Llego al final... actual.. ultimo
+	            
 	            actual.setSiguiente(nodo);
 	            nodo.setAnterior(actual);
 	        }

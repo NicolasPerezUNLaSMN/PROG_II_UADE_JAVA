@@ -4,7 +4,7 @@ import modelo.ColaDinamica;
 import modelo.ColaEstatica;
 public class TestColas {
     public static void main(String[] args) {
-        int N = 100000;
+        int N = 900000;
 
         Runtime runtime = Runtime.getRuntime();
 

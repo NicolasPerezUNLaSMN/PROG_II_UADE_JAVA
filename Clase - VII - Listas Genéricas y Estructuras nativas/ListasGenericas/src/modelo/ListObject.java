@@ -7,7 +7,8 @@ public class ListObject {
 	private Node primero;
 
     private static class Node {
-        Object dato;
+        
+    	Object dato;
         Node siguiente;
 
         Node(Object dato) {

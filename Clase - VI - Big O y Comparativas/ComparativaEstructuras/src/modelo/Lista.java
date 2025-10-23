@@ -7,6 +7,7 @@ public class Lista implements ILista {
 	//---HAGO EL NODO acá para simplificar, 
 	//recordemos que no se hace acá, separarlo!!!
     private static class Nodo {
+    	
        private  int valor;
        private  Nodo siguiente;
 

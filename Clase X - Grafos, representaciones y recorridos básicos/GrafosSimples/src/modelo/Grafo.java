@@ -10,20 +10,27 @@ public class Grafo implements IGrafo {
 	
 	//(clave, valor)
 	//Clave valor como diccionarios de python
+	///Lista : Nico , Brenda, Pepe
+	///clave:  111,    222,    333
 	private Map<Integer, Nodo> nodos = new HashMap<>(); // Mapa de valor -> Nodo
-
-	
+	///nodos serian los vertices
 	
 	 // Agrega un nodo al grafo si no existe aún
 	
-	 public void agregarNodo(int valor) {
+	 public void agregarNodo(int valor) {///Valor será el dato... T
 	     if (!nodos.containsKey(valor)) {
+	    	 ///constansKey
+	    	 ///nodos.put(p.dni, new Nodo(p))
+	    	 ///Valor equilvante a Persona
+	    	 ///key equivalente a Persona.dni
 	         nodos.put(valor, new Nodo(valor));
+	         ///Put es el equivalente al add 
 	     }
 	 }
 
  // Agrega una arista (conexión) entre dos nodos existentes
  public void agregarArista(int origen, int destino) {
+	 
      if (nodos.containsKey(origen) && nodos.containsKey(destino)) {
          Nodo nodoOrigen = nodos.get(origen); //Agarro el nodo que tiene
          //como clave al origen... get retorna el NODO
@@ -79,9 +86,9 @@ public class Grafo implements IGrafo {
  public void bfs(int inicio) {
 	 
      if (!nodos.containsKey(inicio)) return; // precondición
-
      ///Lista y cola
      Set<Integer> visitados = new HashSet<>(); // Conjunto de nodos visitados
+     
      Queue<Nodo> cola = new LinkedList<>(); // Cola para el recorrido
 
      Nodo nodoInicio = nodos.get(inicio);
